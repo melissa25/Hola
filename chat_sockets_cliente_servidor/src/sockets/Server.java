@@ -47,7 +47,8 @@ public class Server {
                 	Thread cliente = new Thread();//cliente implementa a thread
                 	cliente.start();
                   // String buffer=streamIn.readUTF();//mientras no termine voy a leer//lee todo lo que venga del cliente
-                  																													System.out.println(buffer);
+                  																													
+                	System.out.println(buffer);
                 //  terminar=buffer.equals("Adios");//terminar es verdadero si en el buffer se escribio ADIOS
                 }catch (IOException ieo )
                 {
@@ -77,11 +78,6 @@ public class Server {
 	            streamIn.close();
 	    }
 	    
-	    public static void main(String[]args)
-        {
-           Server chat=null;//se crea la variale crea hara la funcion del servidor
-           
-           chat= new Server();
-        }
+	  
 
 }
