@@ -3,7 +3,7 @@ package sockets;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 
-
+//archivo para leer desde el socket
 public class cliente_read implements Runnable {
 
 	public cliente_read() 
