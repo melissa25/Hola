@@ -1,4 +1,5 @@
-package sockets;
+package sockets
+;
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
