@@ -51,17 +51,17 @@ public class chat extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Archivo");
-		menuBar.add(mnNewMenu);
+		JMenu Archivo = new JMenu("Archivo");
+		menuBar.add(Archivo);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Conectar");
-		mnNewMenu.add(mntmNewMenuItem);
+		JMenuItem Conectar = new JMenuItem("Conectar");
+		Archivo.add(Conectar);
 		
 		JSeparator separator = new JSeparator();
-		mnNewMenu.add(separator);
+		Archivo.add(separator);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");
-		mnNewMenu.add(mntmNewMenuItem_1);
+		JMenuItem Salir = new JMenuItem("Salir");
+		Archivo.add(Salir);
 		
 		JMenu mnAcercaDe = new JMenu("Ayuda");
 		menuBar.add(mnAcercaDe);
@@ -72,28 +72,28 @@ public class chat extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JButton btnEnviar = new JButton("Enviar");
+		JButton Enviar = new JButton("Enviar");
 		
-		JButton btnBorrar = new JButton("Borrar");
+		JButton Borrar = new JButton("Borrar");
 		
 		JScrollPane scrollPane = new JScrollPane();
 		
-		JTextArea textArea = new JTextArea();
+		JTextArea Leer = new JTextArea();
 		
-		JTextArea textArea_1 = new JTextArea();
+		JTextArea Escribir = new JTextArea();
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(24)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-						.addComponent(textArea_1)
-						.addComponent(textArea, Alignment.LEADING)
+						.addComponent(Escribir)
+						.addComponent(Leer, Alignment.LEADING)
 						.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
 							.addGap(114)
-							.addComponent(btnEnviar)
+							.addComponent(Enviar)
 							.addGap(38)
-							.addComponent(btnBorrar)))
+							.addComponent(Borrar)))
 					.addPreferredGap(ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
 					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
@@ -102,21 +102,21 @@ public class chat extends JFrame {
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)
+					.addComponent(Leer, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addComponent(textArea_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+					.addComponent(Escribir, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnEnviar)
-						.addComponent(btnBorrar)))
+						.addComponent(Enviar)
+						.addComponent(Borrar)))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(21)
 					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(91, Short.MAX_VALUE))
 		);
 		
-		JList list = new JList();
-		list.setModel(new AbstractListModel() {
+		JList Lista = new JList();
+		Lista.setModel(new AbstractListModel() {
 			String[] values = new String[] {"", "Cliente 1", "Cliente 2", "Cliente 3", "Cliente 4", "Cliente 5"};
 			public int getSize() {
 				return values.length;
@@ -125,7 +125,7 @@ public class chat extends JFrame {
 				return values[index];
 			}
 		});
-		scrollPane.setViewportView(list);
+		scrollPane.setViewportView(Lista);
 		contentPane.setLayout(gl_contentPane);
 	}
 }
